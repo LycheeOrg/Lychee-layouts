@@ -41,9 +41,7 @@ jobs:
       # ── Build ───────────────────────────────────────────────────────────────
 
       - name: Build WASM package
-        # --scope publishes as @lycheeorg/lychee-layouts.
-        # Remove --scope to publish as the unscoped name from Cargo.toml.
-        run: wasm-pack build --target web --out-dir pkg --release --scope lycheeorg
+        run: wasm-pack build --target web --out-dir pkg --release --scope lychee-org
         working-directory: rust
 
       # ── Version ─────────────────────────────────────────────────────────────
