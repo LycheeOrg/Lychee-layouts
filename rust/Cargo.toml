@@ -1,0 +1,23 @@
+[package]
+name = "lychee-layouts"
+version = "0.1.0"
+edition = "2021"
+description = "Photo layout engine for Lychee — justified, masonry, grid and square algorithms compiled to WebAssembly"
+license = "MIT"
+repository = "https://github.com/LycheeOrg/lychee-layouts"
+homepage = "https://github.com/LycheeOrg/lychee-layouts"
+keywords = ["wasm", "layout", "photo", "justified", "masonry"]
+categories = ["wasm", "multimedia::images"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = "0.2"
+serde = { version = "1", features = ["derive"] }
+serde-wasm-bindgen = "0.6"
+
+[profile.release]
+opt-level = "z"   # minimise binary size
+lto = true
+codegen-units = 1
