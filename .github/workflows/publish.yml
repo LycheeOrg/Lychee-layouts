@@ -49,9 +49,7 @@ jobs:
 
       - name: Stamp version from release tag
         # Release tag is e.g. "v1.2.3"; npm version must be "1.2.3".
-        run: |
-          VERSION="${GITHUB_REF_NAME#v}"
-          npm version "$VERSION" --no-git-tag-version
+        run: npm pkg set version="${GITHUB_REF_NAME#v}"
         working-directory: rust/pkg
 
       # ── Publish ─────────────────────────────────────────────────────────────
