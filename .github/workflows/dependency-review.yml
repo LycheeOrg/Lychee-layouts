@@ -5,8 +5,7 @@ on:
     branches: 
       - master
 
-permissions:
-  contents: read
+permissions: read-all
 
 jobs:
   dependency-review:

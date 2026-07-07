@@ -1,6 +1,6 @@
-# lychee-layouts
+# Lychee-layouts
 
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/LycheeOrg/lychee-layouts/badge)](https://securityscorecards.dev/viewer/?uri=github.com/LycheeOrg/lychee-layouts)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/LycheeOrg/Lychee-layouts/badge)](https://securityscorecards.dev/viewer/?uri=github.com/LycheeOrg/Lychee-layouts)
 
 Photo layout engine for [Lychee](https://lycheeorg.github.io), compiled to WebAssembly.
 
@@ -138,13 +138,13 @@ wasm-pack build --target web --out-dir ../dist/rs --release
 
 ```bash
 make build
-# output: dist/lychee-layouts.wasm + dist/wasm_exec.js
+# output: dist/Lychee-layouts.wasm + dist/wasm_exec.js
 ```
 
 For a smaller binary (~5× smaller) with [TinyGo](https://tinygo.org):
 ```bash
 make build-tinygo
-# output: dist/lychee-layouts-tiny.wasm
+# output: dist/Lychee-layouts-tiny.wasm
 ```
 
 ---
@@ -181,7 +181,7 @@ The Go WASM module exposes a `lycheelayouts` global object. It requires `wasm_ex
 <script src="dist/wasm_exec.js"></script>
 <script>
 const go = new Go();
-WebAssembly.instantiateStreaming(fetch('dist/lychee-layouts.wasm'), go.importObject)
+WebAssembly.instantiateStreaming(fetch('dist/Lychee-layouts.wasm'), go.importObject)
   .then(({ instance }) => {
     go.run(instance);
 
